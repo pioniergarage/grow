@@ -53,7 +53,7 @@
 			$('#nav > ul').dropotron({
 				mode: 'fade',
 				noOpenerFade: true,
-				expandMode: (skel.vars.touch ? 'click' : 'hover')
+				expandMode: 'click hover'
 			});
 
 		// Off-Canvas Navigation.
