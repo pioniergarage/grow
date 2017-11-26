@@ -6,6 +6,24 @@
 -->
 <html>
 	<head>
+		<!-- Opt-Out-Cookie -->
+		<script>
+            // Set to the same value as the web property used on the site
+            var gaProperty = 'UA-25291840-2';
+
+            // Disable tracking if the opt-out cookie exists.
+            var disableStr = 'ga-disable-' + gaProperty;
+            if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                window[disableStr] = true;
+            }
+
+            // Opt-out function
+            function gaOptout() {
+                document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                window[disableStr] = true;
+            }
+		</script>
+		<!-- End Opt-Out-Cookie -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25291840-2"></script>
 		<script>
@@ -248,8 +266,10 @@
 					<li><a href="mailto:info@pioniergarage.de" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li><a href="http://www.pioniergarage.de" class="icon">PionierGarage e.V</a></li><li><a href="http://html5up.net" class="icon">Design</a></li>
-					<li><a href="http://pioniergarage.de/impressum/" class="icon">Impressum</a></li>
+					<li><a href="http://www.pioniergarage.de" class="icon">PionierGarage e.V</a></li>
+					<li><a href="http://html5up.net" class="icon">Design</a></li>
+					<li><a href="impressum.html" class="icon">Impressum</a></li>
+					<li><a href="datenschutz.html" class="icon">Datenschutz</a></li>
 				</ul>
 			</footer>
 		</div>
