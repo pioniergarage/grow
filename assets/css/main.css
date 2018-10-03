@@ -42,12 +42,22 @@
     .fit {
           max-width: 99%;
           max-height: 99%;
-        }
+		}
+		
     .fitHalf {
             max-width: 30%;
             max-height: 30%;
             display: inline-block;
-        }
+		}
+		
+	.fitQuarter {
+			max-width: 20%;
+			max-height: 20%;
+			max-width: 100px;
+			display: inline-block;
+            margin-bottom: 15px;
+            margin-top: 10px;
+		}
 
     .fitMagic {
             max-width: 30%;
