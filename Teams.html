@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<!-- Opt-Out-Cookie -->
+	<script>
+        // Set to the same value as the web property used on the site
+        var gaProperty = 'UA-25291840-2';
+
+        // Disable tracking if the opt-out cookie exists.
+        var disableStr = 'ga-disable-' + gaProperty;
+        if (document.cookie.indexOf(disableStr + '=true') > -1) {
+            window[disableStr] = true;
+        }
+
+        // Opt-out function
+        function gaOptout() {
+            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[disableStr] = true;
+        }
+	</script>
+	<!-- End Opt-Out-Cookie -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25291840-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-25291840-2', { 'anonymize_ip': true });
+	</script>
+
+	<title>Teams | GROW by PionierGarage</title>
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+	<meta charset="utf-8" />
+	<meta property="og:title" content="GROW Student Founding Contest - by PionierGarage"/>
+	<meta property="og:image" content="http://grow.pioniergarage.de/images/crawler_banner_2.jpg"/>
+	<meta property="og:site_name" content="GROW by PionierGarage"/>
+	<meta property="og:url" content="http://grow.pioniergarage.de"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="GROW is an 11-week long founding contest for students. Realise your ideas and advance your startup and win prizes based on your progress."/>		
+
+	<style>
+		img.with-text {
+			float: left;
+			margin: 10px;
+			width: 100%;
+		}
+
+		img.logo {
+			float: right;
+			max-width: 100%;
+			max-height: 150px;
+		}
+
+		.content h3 {
+			font-size: 100%;
+		}
+
+		.content h2+h3 {
+			margin-top: -20px;
+		}
+
+		.icons {
+			text-align: center;
+		}
+
+		.icons img {
+			max-height: 30px;
+			margin: 5px 10px;
+			vertical-align: center;
+			opacity: 0.6;
+		}
+
+		.icons img:hover {
+			opacity: 0.4;
+		}
+
+		.icons a {
+			border: 0 !important;
+		}
+
+		.out {
+			font-style: italic;
+			text-decoration: line-through;
+			opacity: 0.6;
+		}
+	</style>
+</head>
+
+<body class="no-sidebar" data-file="assets/data/teams.csv">
+	<div id="page-wrapper">
+
+		<header id="header">
+			<h1 id="logo"><a href="index.html">Grow <span>by PionierGarage</span></a></h1>
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li class="submenu">
+						<a href="Programm.html">Program</a>
+						<ul>
+							<li><a href="Programm.html#calendar">Calendar</a></li>
+							<li><a href="Programm.html#kickoff">Kickoff</a></li>
+							<li><a href="Programm.html#midterm">Midterm</a></li>
+							<li><a href="Programm.html#final">Final</a></li>
+							<li><a href="Programm.html#rahmenprogramm">Support program</a></li>
+						</ul>
+					</li>
+					<li class="submenu">
+						<a href="http://pioniergarage.de">About us</a>
+						<ul>
+							<li><a href="Team.html">Organisors</a></li>
+							<li><a href="https://pioniergarage.de/kontakt/">Contact</a></li>
+							<li><a href="https://pioniergarage.de">PionierGarage</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<article id="main">
+
+			<header class="special container">
+				<span class="icon fa-user"></span>
+				<h2>
+					<strong>Teams</strong> of 2018/19
+				</h2>
+				<br />
+				<h6 style="font-style: italic; text-transform: inherit">
+					The participants may be at different points in their development.
+					<br /> Here you can read about what they do.
+				</h6>
+			</header>
+
+			<section id="toc" class="wrapper style4 container">
+				<div class="content">
+					<section>
+						<header>
+							<h2>Team overview</h2>
+						</header>
+						<ul class="data-repeat-wrapper">
+							<li class="data-repeat-template" style="display:none;">
+								<a href="#%ID">%Name</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+			<div class="data-repeat-wrapper">
+				
+				<section class="wrapper style4 container data-repeat-template" style="display:none;">
+					<div class="content" id="%ID">
+						<div class="row">
+							<header class="10u 12u(narrower)">
+								<h2>
+									<a href="%Website" data-if="Website">%Name</a>
+									<span data-not-if="Website">%Name</span>
+								</h2>
+								<h3>
+									%Members 
+									<span data-if="Founded">(* %Founded)</span>
+								</h3>
+							</header>
+							<div class="2u 12u(narrower)" data-if="Logo">
+								<img class="logo" src="images/teams/%Logo" />
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+						<p>
+							<div class="3u 12u(narrower)" data-if="Photo">
+								<img src="images/teams/%Photo" class="with-text" />
+							</div>
+							%Description
+						</p>
+						<div style="clear: both;"></div>
+						<div class="icons">
+							<a href="%Website" data-if="Website">
+								<img src="images/icon/www.png" />
+							</a>
+							<a href="mailto:%Email" data-if="Email">
+								<img src="images/icon/mail.png" />
+							</a>
+							<a href="https://www.facebook.com/%Facebook" data-if="Facebook">
+								<img src="images/icon/fb.png" />
+							</a>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+		</article>
+
+		<footer id="footer">
+			<ul class="icons">
+				<li>
+					<a href="http://www.pioniergarage.de" class="icon">
+						<img alt="PionierGarage Website" src="images/icon/shortcutIcon_scaled_bw_1.png" width="22px" height="22px">
+					</a>
+				</li>
+				<li>
+					<a href="http://www.facebook.com/Pioniergarage/" class="icon fa-facebook">
+						<span class="label">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:info@pioniergarage.de" class="icon fa-envelope-o">
+						<span class="label">Email</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li><a href="http://www.pioniergarage.de" class="icon">PionierGarage e.V</a></li>
+				<li><a href="http://html5up.net" class="icon">Design</a></li>
+				<li><a href="impressum.html" class="icon">Impressum</a></li>
+				<li><a href="datenschutz.html" class="icon">Datenschutz</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.edited.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollgress.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/papaparse.min.js"></script>
+	<script src="assets/js/dataloader.js"></script>
+
+</body>
+
+</html>
