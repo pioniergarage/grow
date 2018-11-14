@@ -35,7 +35,7 @@
 		gtag('config', 'UA-25291840-2', { 'anonymize_ip': true });
 	</script>
 
-	<title>Teams | GROW by PionierGarage</title>
+	<title>Mentors | GROW by PionierGarage</title>
 
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,54 +53,26 @@
 	<meta property="og:description" content="GROW is an 11-week long founding contest for students. Realise your ideas and advance your startup and win prizes based on your progress."/>		
 
 	<style>
+		hr {
+			border: solid 1px rgba(124, 128, 129, 0.2);
+			margin: 1.5em 0;
+		}
+
 		img.with-text {
-			float: left;
-			margin: 10px;
 			width: 100%;
 		}
 
-		img.logo {
-			float: right;
-			max-width: 100%;
-			max-height: 150px;
-		}
-
 		.content h3 {
-			font-size: 100%;
+			font-size: 130%;
 		}
 
-		.content h2+h3 {
+		.content h3+h5 {
 			margin-top: -20px;
-		}
-
-		.icons {
-			text-align: center;
-		}
-
-		.icons img {
-			max-height: 30px;
-			margin: 5px 10px;
-			vertical-align: center;
-			opacity: 0.6;
-		}
-
-		.icons img:hover {
-			opacity: 0.4;
-		}
-
-		.icons a {
-			border: 0 !important;
-		}
-
-		.out {
-			font-style: italic;
-			text-decoration: line-through;
-			opacity: 0.6;
 		}
 	</style>
 </head>
 
-<body class="no-sidebar" data-file="assets/data/teams.csv">
+<body class="no-sidebar" data-file="assets/data/mentors.csv">
 	<div id="page-wrapper">
 
 		<header id="header">
@@ -136,13 +108,15 @@
 
 			<header class="special container">
 				<span class="icon fa-user"></span>
-				<h2>
-					<strong>Teams</strong> of 2018/19
-				</h2>
+				<h2>Teams are supported by these
+					<strong>Mentors</strong></h2>
 				<br />
 				<h6 style="font-style: italic; text-transform: inherit">
-					The participants may be at different points in their development.
-					<br /> Here you can read about what they do.
+					We are not able to display contact information here due to privacy reasons.
+					<br />
+					Please
+					<a href="mailto:grow@pioniergarage.de" style="text-decoration: underline;">write us an email</a> 
+					and we will connect you.
 				</h6>
 			</header>
 
@@ -150,11 +124,11 @@
 				<div class="content">
 					<section>
 						<header>
-							<h2>Team overview</h2>
+							<h2>Mentor overview</h2>
 						</header>
 						<ul class="data-repeat-wrapper">
 							<li class="data-repeat-template" style="display:none;">
-								<a href="#%ID">%Name</a>
+								<a href="#%ID">%FirstName %LastName</a> - %Category
 							</li>
 						</ul>
 					</section>
@@ -162,43 +136,20 @@
 			</section>
 
 			<div class="data-repeat-wrapper">
-				
+
 				<section class="wrapper style4 container data-repeat-template" style="display:none;">
-					<div class="content" id="%ID">
-						<div class="row">
-							<header class="10u 12u(narrower)">
-								<h2>
-									<a href="%Website" data-if="Website">%Name</a>
-									<span data-not-if="Website">%Name</span>
-								</h2>
-								<h3>
-									%Members 
-									<span data-if="Founded">(* %Founded)</span>
-								</h3>
-							</header>
-							<div class="2u 12u(narrower)" data-if="Logo">
-								<img class="logo" src="images/teams/%Logo" />
-							</div>
+					<div class="content" id="%ID" style="overflow-y: auto">
+						<div class="3u 12u(narrower)" style="float: right">
+							<img src="images/mentors/%Photo" data-if="Photo" class="with-text" />
+							<img src="images/mentors/_unknown_profile.jpg" data-not-if="Photo" class="with-text" />
 						</div>
-						<div style="clear: both;"></div>
+						<header>
+							<h3>%FirstName %LastName</h3>
+							<h5>%Job</h5>
+						</header>
 						<p>
-							<div class="3u 12u(narrower)" data-if="Photo">
-								<img src="images/teams/%Photo" class="with-text" />
-							</div>
-							%Description
+							%Expertise
 						</p>
-						<div style="clear: both;"></div>
-						<div class="icons">
-							<a href="%Website" data-if="Website">
-								<img src="images/icon/www.png" />
-							</a>
-							<a href="mailto:%Email" data-if="Email">
-								<img src="images/icon/mail.png" />
-							</a>
-							<a href="https://www.facebook.com/%Facebook" data-if="Facebook">
-								<img src="images/icon/fb.png" />
-							</a>
-						</div>
 					</div>
 				</section>
 

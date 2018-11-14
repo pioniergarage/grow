@@ -29,8 +29,6 @@ function parseData(data, callback) {
 
     var results = Papa.parse(data, {
         header: true,
-        delimiter: ';',
-        newline: '\r\n',
         fastMode: false,
         skipEmptyLines: true,
     });
