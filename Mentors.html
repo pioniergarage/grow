@@ -69,6 +69,10 @@
 		.content h3+h5 {
 			margin-top: -20px;
 		}
+
+		.content a {
+			text-decoration: underline;
+		}
 	</style>
 </head>
 
@@ -90,6 +94,13 @@
 							<li><a href="Programm.html#midterm">Midterm</a></li>
 							<li><a href="Programm.html#final">Final</a></li>
 							<li><a href="Programm.html#rahmenprogramm">Support program</a></li>
+						</ul>
+					</li>
+					<li class="submenu">
+						<a href="index.html">Contest</a>
+						<ul>
+							<li><a href="Teams.html">Teams</a></li>
+							<li><a href="Mentors.html">Mentors</a></li>
 						</ul>
 					</li>
 					<li class="submenu">
@@ -144,7 +155,8 @@
 							<img src="images/mentors/_unknown_profile.jpg" data-not-if="Photo" class="with-text" />
 						</div>
 						<header>
-							<h3>%FirstName %LastName</h3>
+							<h3 data-if="Web"><a href="%Web">%FirstName %LastName</a></h3>
+							<h3 data-not-if="Web">%FirstName %LastName</h3>
 							<h5>%Job</h5>
 						</header>
 						<p>
