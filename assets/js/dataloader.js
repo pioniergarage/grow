@@ -54,7 +54,7 @@ function processData(data) {
             copy.removeClass('data-repeat-template');
 
             // Remove conditional elements
-            var ifs = $(copy).find('[data-if]');
+            var ifs = $(copy).find('[data-if]').andSelf().filter('[data-if]');
             $.each(ifs, function (index, condElem) {
                 var condition = $(condElem).attr('data-if');
                 if (row[condition] == false) {
@@ -63,7 +63,7 @@ function processData(data) {
             });
 
             // Remove negative conditional elements
-            var notifs = $(copy).find('[data-not-if]');
+            var notifs = $(copy).find('[data-not-if]').andSelf().filter('[data-not-if]');
             $.each(notifs, function (index, condElem) {
                 var condition = $(condElem).attr('data-not-if');
                 if (row[condition]) {
