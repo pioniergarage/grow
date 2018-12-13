@@ -9,20 +9,20 @@
 <head>
 	<!-- Opt-Out-Cookie -->
 	<script>
-        // Set to the same value as the web property used on the site
-        var gaProperty = 'UA-25291840-2';
+		// Set to the same value as the web property used on the site
+		var gaProperty = 'UA-25291840-2';
 
-        // Disable tracking if the opt-out cookie exists.
-        var disableStr = 'ga-disable-' + gaProperty;
-        if (document.cookie.indexOf(disableStr + '=true') > -1) {
-            window[disableStr] = true;
-        }
+		// Disable tracking if the opt-out cookie exists.
+		var disableStr = 'ga-disable-' + gaProperty;
+		if (document.cookie.indexOf(disableStr + '=true') > -1) {
+			window[disableStr] = true;
+		}
 
-        // Opt-out function
-        function gaOptout() {
-            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-            window[disableStr] = true;
-        }
+		// Opt-out function
+		function gaOptout() {
+			document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+			window[disableStr] = true;
+		}
 	</script>
 	<!-- End Opt-Out-Cookie -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -45,12 +45,12 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
 	<meta charset="utf-8" />
-	<meta property="og:title" content="GROW Student Founding Contest - by PionierGarage"/>
-	<meta property="og:image" content="http://grow.pioniergarage.de/images/crawler_banner_2.jpg"/>
-	<meta property="og:site_name" content="GROW by PionierGarage"/>
-	<meta property="og:url" content="http://grow.pioniergarage.de"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:description" content="GROW is an 11-week long founding contest for students. Realise your ideas and advance your startup and win prizes based on your progress."/>		
+	<meta property="og:title" content="GROW Student Founding Contest - by PionierGarage" />
+	<meta property="og:image" content="http://grow.pioniergarage.de/images/crawler_banner_2.jpg" />
+	<meta property="og:site_name" content="GROW by PionierGarage" />
+	<meta property="og:url" content="http://grow.pioniergarage.de" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="GROW is an 11-week long founding contest for students. Realise your ideas and advance your startup and win prizes based on your progress." />
 
 	<style>
 		img.with-text {
@@ -125,6 +125,7 @@
 						<ul>
 							<li><a href="Teams.html">Teams</a></li>
 							<li><a href="Mentors.html">Mentors</a></li>
+							<li><a href="Jury.html">Jury</a></li>
 						</ul>
 					</li>
 					<li class="submenu">
@@ -169,7 +170,7 @@
 			</section>
 
 			<div class="data-repeat-wrapper">
-				
+
 				<section class="wrapper style4 container data-repeat-template" style="display:none;">
 					<div class="content" id="%ID" data-if="Active">
 						<div class="row">
@@ -179,7 +180,7 @@
 									<span data-not-if="Website">%Name</span>
 								</h2>
 								<h3>
-									%Members 
+									%Members
 									<span data-if="Founded">(* %Founded)</span>
 								</h3>
 							</header>
@@ -215,7 +216,8 @@
 
 		<footer id="footer">
 			<ul class="icons">
-				<li><a href="http://www.pioniergarage.de" class="icon"> <img alt="PionierGarage Website" src="images/icon/shortcutIcon_scaled_bw_1.png" width="22px" height="22px"></a></li>
+				<li><a href="http://www.pioniergarage.de" class="icon"> <img alt="PionierGarage Website" src="images/icon/shortcutIcon_scaled_bw_1.png"
+						 width="22px" height="22px"></a></li>
 				<li><a href="http://www.facebook.com/Pioniergarage/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 				<li><a href="mailto:grow@pioniergarage.de" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 			</ul>
