@@ -49,6 +49,17 @@ function processData(data) {
         // go through data
         $.each(data, function (index, row) {
 
+            // skip depending on condition
+            var skipIfEquals = false;
+            var skipCondition = $(template).attr('data-if');
+            if (skipCondition == undefined) {
+                skipIfEquals = true;
+                skipCondition = $(template).attr('data-not-if');
+            }
+            if (skipCondition != undefined && row[skipCondition] == skipIfEquals) {
+                return;
+            }
+
             // duplicate template
             var copy = $(template).clone();
             copy.removeClass('data-repeat-template');

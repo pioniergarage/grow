@@ -160,19 +160,79 @@
 						<header>
 							<h2>Team overview</h2>
 						</header>
+						<b>Finalists</b><br />
 						<ul class="data-repeat-wrapper">
-							<li class="data-repeat-template" style="display:none;">
-								<a href="#%ID" data-if="Active">%Name</a>
+							<li class="data-repeat-template" data-if="Finalist" style="display:none;">
+								<a href="#%ID">%Name</a>
+							</li>
+						</ul>
+						<b>Drop Outs</b><br />
+						<ul class="data-repeat-wrapper" style="font-style: italic; opacity: 0.7;">
+							<li class="data-repeat-template" data-not-if="Finalist" style="display:none;">
+								<a href="#%ID">%Name</a>
 							</li>
 						</ul>
 					</section>
 				</div>
 			</section>
 
+			<div class="special container" style="text-align: center">
+				<h2>Finalists</h2>
+				<br />
+			</div>
+
 			<div class="data-repeat-wrapper">
 
-				<section class="wrapper style4 container data-repeat-template" style="display:none;">
-					<div class="content" id="%ID" data-if="Active">
+				<section class="wrapper style4 container data-repeat-template" data-if="Finalist" style="display:none;">
+					<div class="content" id="%ID">
+						<div class="row">
+							<header class="10u 12u(narrower)">
+								<h2>
+									<a href="%Website" data-if="Website">%Name</a>
+									<span data-not-if="Website">%Name</span>
+								</h2>
+								<h3>
+									%Members
+									<span data-if="Founded">(* %Founded)</span>
+								</h3>
+							</header>
+							<div class="2u 12u(narrower)" data-if="Logo">
+								<img class="logo" src="images/teams/%Logo" />
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+						<p>
+							<div class="3u 12u(narrower)" data-if="Photo">
+								<img src="images/teams/%Photo" class="with-text" />
+							</div>
+							%Description
+						</p>
+						<div style="clear: both;"></div>
+						<div class="icons">
+							<a href="%Website" data-if="Website">
+								<img src="images/icon/www.png" />
+							</a>
+							<a href="mailto:%Email" data-if="Email">
+								<img src="images/icon/mail.png" />
+							</a>
+							<a href="https://www.facebook.com/%Facebook" data-if="Facebook">
+								<img src="images/icon/fb.png" />
+							</a>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+			<div class="special container" style="text-align: center">
+				<h2>Drop Outs</h2>
+				<br />
+			</div>
+
+			<div class="data-repeat-wrapper">
+
+				<section class="wrapper style4 container data-repeat-template" data-not-if="Finalist" style="display:none;">
+					<div class="content" id="%ID">
 						<div class="row">
 							<header class="10u 12u(narrower)">
 								<h2>
